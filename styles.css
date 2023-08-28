@@ -1,0 +1,33 @@
+div{
+    display: flex;
+    border-style: solid;
+    border-width: 1px;
+    border-color: aqua;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    justify-content: space-between;
+}
+
+.header .right{
+    flex-direction: row;
+}
+.section1{
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section1 .left{
+    flex-direction: column;
+}
+
+.section2{
+    flex-direction: column;
+    align-items: center;
+}
+
+
