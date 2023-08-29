@@ -1,29 +1,73 @@
+:root{
+    --primaryColor: #1f2937;
+    --whiteTextColor: #f9faf8;
+    --linksColor: #e5e7eb;
+    --quoteBacgroud: #e5e7eb;
+
+}
+
 div{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     display: flex;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 1px;
-    border-color: aqua;
+    border-color: aqua; */
+    
 }
 body{
     display: flex;
     flex-direction: column;
+    margin: 0px;
+    width: 1000px;
 }
 
 .header{
     justify-content: space-between;
+    align-items: center;
+    background-color: var(--primaryColor);
+    color: var(--whiteTextColor);
+    height: 50px;
+
 }
 
 .header .right{
     flex-direction: row;
+    gap: 10px;
+
+
 }
 .section1{
     justify-content: space-between;
     align-items: center;
+    background-color:  var(--primaryColor);
+    color: var(--whiteTextColor);
+    align-items: stretch;
+    padding: 80px 0px;
 }
 
 .section1 .left{
     flex-direction: column;
+    width: 500px;
+
 }
+
+.section1 .left .head{
+    flex-wrap: wrap;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.section1 .left .
+
+.section1 .right{
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    border-style: solid;
+    flex: 1 1 auto;
+    background-color: #39475a;
+}
+
 
 .section2{
     flex-direction: column;
