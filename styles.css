@@ -13,17 +13,29 @@ div{
     border-width: 1px;
     border-color: aqua;  */
 }
+.width{
+    width: 800px;
+    align-self: center;
+    flex-grow: 1;
+}
 body{
     display: flex;
     flex-direction: column;
     margin: 0px;
-    max-width: 1000px;
-    min-width: 600px;
 }
+.widthColor{
+    flex-direction: column;
+    margin: 0px;
+    align-items: center;
+}
+
+.colorHeader{
+    background-color: var(--primaryColor);
+}
+
 .header{
     justify-content: space-between;
     align-items: center;
-    background-color: var(--primaryColor);
     color: var(--whiteTextColor);
     height: 50px;
 }
@@ -41,7 +53,6 @@ body{
 .section1{
     justify-content: space-between;
     align-items: center;
-    background-color:  var(--primaryColor);
     color: var(--whiteTextColor);
     align-items: stretch;
     padding: 80px 0px;
@@ -88,6 +99,7 @@ button{
 }
 
 .section2 .bottom{
+    justify-content: space-around;
     gap:30px
 }
 .containerImage{
@@ -105,13 +117,18 @@ button{
 .containerImage .bottom{
     text-align: center;
 }
+.colorQuote{
+    background-color:   var(--quoteBacgroud);
+}
 .section3{
     flex-direction: column;
-    background-color: var(--backgroundColor);
-    padding: 100px;
+    padding: 100px 0px;
     font-style: italic;
     font-size: 36px;
     font-weight: 100;
+}
+.section3 .top{
+    padding: 0px 80px;
 }
 .section3 .bottom{
     align-self: flex-end;
@@ -119,4 +136,35 @@ button{
     font-weight: 500;
     font-size: 30px;
     padding: 0px 20px;
+
+}
+.section4 .window{
+    flex-grow: 1;
+    justify-content: space-between;
+    margin:100px 0px;
+    border-radius: 15px;
+    padding: 30px 80px;
+    background-color: var(--buttonColor);
+}
+.window .left{
+    flex-direction: column;
+}
+.window .left .top{
+    color: var(--whiteTextColor);
+    font-size: 23px;
+    font-weight: 400;
+}
+.window .left .bottom{
+    color: var(--whiteTextColor);
+    font-weight: 200;
+}
+.window button{
+    align-self: center;
+}
+.footer{
+    background-color: var(--primaryColor);
+    color: var(--linksColor);
+    justify-content: center;
+    padding: 20px;
+    font-weight: 100;
 }
