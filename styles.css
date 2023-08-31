@@ -2,6 +2,7 @@
     --primaryColor: #1f2937;
     --whiteTextColor: #f9faf8;
     --linksColor: #e5e7eb;
+    --linksColorClicked: #bdc1c9;
     --quoteBacgroud: #e5e7eb;
     --buttonColor: #3882f6;
     --backgroundColor: #e5e7eb;
@@ -15,13 +16,25 @@ div{
     border-width: 1px;
     border-color: aqua;  */
 }
+a:link, a:visited{
+    text-decoration: none;
+    color: var(--linksColor);
+    font-weight: 100;
+}
+a:hover, a:active {
+    text-decoration: none;
+    color: var(--linksColorClicked);
+    font-weight: 100;
+}
 .left{
     flex:1 1 auto;
 }
 .width{
-    width: 1000px;
+    max-width: 1000px;
+    min-width: 500px;
     align-self: center;
     flex: 1 1;
+    flex-wrap: wrap;
 }
 body{
     display: flex;
@@ -33,18 +46,19 @@ body{
     margin: 0px;
     align-items: stretch;
 }
-
 .colorHeader{
     background-color: var(--primaryColor);
 }
 .header{
-
+    width: auto;
+    width: 96vw;
     align-self: center;
     justify-content: space-between;
     align-items: center;
     color: var(--whiteTextColor);
     height: 50px;
-
+    padding: 0px 10px;
+    gap: 10px;
 }
 .header .left{
     flex-direction: row;
@@ -63,15 +77,20 @@ body{
     font-size: 18px;
 
 }
+.empty{
+    flex: 1;
+}
 .section1{
     justify-content: space-between;
     color: var(--whiteTextColor);
     align-items: stretch;
     padding: 80px 10px;
+    gap:50px 20px;
 }
 .section1 .left{
     flex-direction: column;
     flex: 1;
+    min-width: 300px;
 }
 .section1 .left .head{
     flex-wrap: wrap;
@@ -83,9 +102,10 @@ body{
     align-items: center;
     flex: 1;
     background-color: #4b4e52;
-    width: 100%;
+    min-width: 300px;
 }
 button{
+    transition-duration: 0.5s;
     color: var(--whiteTextColor);
     font-weight: 700;
     align-self: baseline;
@@ -94,6 +114,10 @@ button{
     padding: 7px 30px;
     border-radius:5px;
     margin: 10px 0px;
+}
+button:hover{
+    background-color: var(--backgroundColor);
+    color: var(--buttonColor);
 }
 .button2{
     border-style: solid;
@@ -108,16 +132,15 @@ button{
     font-weight: 800;
     font-size: 28px;
 }
-
 .section2 .bottom{
-    justify-content: space-around;
-    gap:30px
+    flex-direction: row;
+    gap: 10px;
 }
 .containerImage{
     flex-direction: column;
-    align-items: center;
+    gap:5px;
 }
-.section2 img{
+.section2 .img{
     height: 150px;
     width: 150px;
     border-style: solid;
@@ -127,6 +150,8 @@ button{
 }
 .containerImage .bottom{
     text-align: center;
+    align-self: center;
+    max-width: 200px;
 }
 .colorQuote{
     background-color:   var(--quoteBacgroud);
@@ -147,7 +172,6 @@ button{
     font-weight: 500;
     font-size: 30px;
     padding: 0px 20px;
-
 }
 .section4 .window{
     flex-grow: 1;
